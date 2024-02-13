@@ -11,10 +11,11 @@ Execute the following commands after cloning the repository and navigating into 
 mkdir build
 cd build
 cmake ..
-make
+sudo make install
 ```
-This will install cppy system-wide.
-----WIP----
+This will install the library system-wide.
+If you want to install the library locally, then change the parameter of `CPPY_LOCAL_INSTALL` to ON in CMakeLists.txt. All of the installed files will be located in `/build/install/`
+----Windows test here----
 
 ## Usage
 After installing the library you include the header file `cppy.h`:
@@ -100,5 +101,6 @@ The following methods are currently supported by cppy:
 | vars() | Returns the __dict__ property of an object | Not implemented |
 | zip() | Returns a vector of tuples, where the first element in each passed container is paired together, same goes for the second element and so on. | Implemented |
 
-
+## Uninstallation
+Delete the files that were extracted by either CMake or by you. If you've installed the library system-wide, then delete the files located in /usr/local/include/cppy/ and /usr/local/include/cppy.h
 ## Other
