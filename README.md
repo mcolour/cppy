@@ -6,23 +6,32 @@ Open-source C++ library focused on bringing Python's methods to C++
 You can install cppy by simply extracting files from the `include` folder into your project directory
 ### CMake
 You can also install the library via CMake.
-Execute the following commands after cloning the repository and navigating into its root directory:
+Execute the following commands after cloning the repository and navigating into its root directory in the terminal:
+
+Linux:
 ```sh
 mkdir build
 cd build
 cmake ..
 sudo make install
 ```
+Windows (using MinGW) (Run Powershell as administrator):
+
+```sh
+mkdir build
+cd build
+cmake -G "MinGW Makefiles" ..
+cmake --build . --target 
+```
 This will install the library system-wide.
 If you want to install the library locally, then change the parameter of `CPPY_LOCAL_INSTALL` to ON in CMakeLists.txt. All of the installed files will be located in `/build/install/`
-----Windows test here----
 
 ## Usage
 After installing the library you include the header file `cppy.h`:
 ```c++
 #include "cppy.h"
 ```
-If you want to include only a specific method (e.g. print), then include this instead:
+If you want to include only a specific method (e.g. print), then use the following syntax: `#include "cppy/function.h"`:
 ```c++
 #include "cppy/print.h"
 
@@ -102,5 +111,9 @@ The following methods are currently supported by cppy:
 | zip() | Returns a vector of tuples, where the first element in each passed container is paired together, same goes for the second element and so on. | Implemented |
 
 ## Uninstallation
-Delete the files that were extracted by either CMake or by you. If you've installed the library system-wide, then delete the files located in /usr/local/include/cppy/ and /usr/local/include/cppy.h
+Delete the files that were extracted by either CMake or by you. If you've installed the library system-wide, then delete the files located in
+Linux:
+`/usr/local/include/cppy/` and `/usr/local/include/cppy.h`
+Windows:
+`C:/Program Files (x86)/cppy/`
 ## Other
