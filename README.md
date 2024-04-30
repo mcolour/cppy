@@ -116,4 +116,3 @@ Linux:
 `/usr/local/include/cppy/` and `/usr/local/include/cppy.h`
 Windows:
 `C:/Program Files (x86)/cppy/`
-## Other
