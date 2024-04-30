@@ -8,16 +8,13 @@ include(CMakePackageConfigHelpers)
 
 option(CPPY_LOCAL_INSTALL "Install cppy locally (Default OFF)" OFF)
 
-# Header-only library
 add_library(cppy INTERFACE)
 
-# Set target properties
 target_include_directories(cppy
     INTERFACE
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>)
 
-# Package information
 write_basic_package_version_file(
     "${CMAKE_CURRENT_BINARY_DIR}/cppyConfigVersion.cmake"
     VERSION ${PROJECT_VERSION}
@@ -38,7 +35,6 @@ if (CPPY_LOCAL_INSTALL)
         "${PROJECT_BINARY_DIR}/cppyConfig.cmake"
         INSTALL_DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/cppy)
         
-    # Library installation
     install(EXPORT cppyTargets DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/cppy)
     install(FILES "${PROJECT_BINARY_DIR}/cppyConfigVersion.cmake"
                 "${PROJECT_BINARY_DIR}/cppyConfig.cmake"
@@ -59,7 +55,6 @@ else()
     "${PROJECT_BINARY_DIR}/cppyConfig.cmake"
     INSTALL_DESTINATION lib/cmake/cppy)
 
-    # Library installation
     install(EXPORT cppyTargets DESTINATION lib/cmake/cppy)
     install(FILES "${PROJECT_BINARY_DIR}/cppyConfigVersion.cmake"
             "${PROJECT_BINARY_DIR}/cppyConfig.cmake"
