@@ -20,7 +20,7 @@ int main()
     std::unordered_multimap<std::string, int> myUnorderedMultiMap = {{"Alice", 25}, {"Bob", 30}, {"Frank", 28}};
     std::tuple<int, double, std::string> myTuple(1, 3.14, "hey");
 
-    print(Sep{"\n\n"}, Flush{true}, End{"\nIT WORKS!!!!!!"},
+    print(Sep{"\n\n"}, Flush{true}, End{"\nEnd"},
         a, map, v, myDeque, myList, mylList,
         mySet, myMultiSet, myMultiMap, myUnorderedSet,
         myUnorderedMultiSet, myUnorderedMap, myUnorderedMultiMap, matrix, myTuple,
