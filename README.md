@@ -105,7 +105,7 @@ The following methods are currently supported by cppy:
 | str() | Converts the input into a string. | Implemented |
 | sum() | Sums start and the elements of a container and returns the total. The container's elements are normally numbers. | Implemented |
 | super() | Returns an object that represents the parent class. | Not implemented |
-| tuple() | Returns a tuple object | Already implemented in C/C++ (`<tuple>`) |
+| tuple() | Returns a tuple object | Already implemented in C/C++ (`std::tuple`) |
 | type() | Returns typename of the input. | Implemented |
 | vars() | Returns the __dict__ property of an object | Not implemented |
 | zip() | Returns a vector of tuples, where the first element in each passed container is paired together, same goes for the second element and so on. | Implemented |
