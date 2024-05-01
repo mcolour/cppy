@@ -1,5 +1,5 @@
 # cppy
-Open-source C++ library focused on bringing Python's methods to C++
+Open-source C++ library focused on bringing Python's methods to C++17 and higher
 
 ## Installation
 ### File extraction
